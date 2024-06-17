@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:wabiz_freezed/basic_model.dart';
+import 'package:wabiz_freezed/freezed_user_model.dart';
 
 import 'json_serial_basic_model.dart';
 
@@ -33,8 +34,10 @@ class MainApp extends StatelessWidget {
                 final jsonData = element as Map<String, dynamic>;
                 // print(jsonData['name']);
                 // final user = BasicUser.fromJson(jsonData);
-                final user = AdvanceUser.fromJson(jsonData);
+                // final user = AdvanceUser.fromJson(jsonData);
+                final user = FreezedUserModel.fromJson(jsonData);
                 print(user.toString());
+                // user.address!.zipcode;
                 // final user = BasicUser(
                 //   id: jsonData['id'] as int?,
                 //   name: jsonData['name'] as String?,
